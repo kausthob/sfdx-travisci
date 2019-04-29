@@ -27,7 +27,5 @@ script:
 - sfdx force:org:delete -u ciorg -p
 
 after_success:
-- sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key
-  --username $USERNAME --setdefaultdevhubusername -a DeploymentOrg
-- sfdx force:source:push -u DeploymentOrg 
-- sfdx force:apex:test:run -u DeploymentOrg --wait 10
+- sfdx force:source:deploy -u HubOrg -w 10 -p ./force-app --json 
+- sfdx force:apex:test:run -u HubOrg -w 10
