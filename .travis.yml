@@ -25,3 +25,7 @@ script:
 - sfdx force:source:push -u ciorg
 - sfdx force:apex:test:run -u ciorg --wait 10
 - sfdx force:org:delete -u ciorg -p
+
+after_success:
+- sfdx force:source:push -u HubOrg 
+- sfdx force:apex:test:run -u HubOrg --wait 10
