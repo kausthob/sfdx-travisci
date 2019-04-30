@@ -12,6 +12,7 @@ branches:
 before_install:
 - sudo apt-get install pandoc
 - gem install asciidoctor
+ - chmod +x ./travis/push.sh
 - openssl aes-256-cbc -K $encrypted_764440049a39_key -iv $encrypted_764440049a39_iv
   -in assets/server.key.enc -out assets/server.key -d
 - export SFDX_AUTOUPDATE_DISABLE=false
@@ -45,7 +46,7 @@ after_success:
 - git add .
 - git commit --message "Travis Automated build"
 - git remote add origin-pages https://${GH_TOKEN}@github.com/kausthob/sfdx-travisci.git > /dev/null 2>&1
-- git push --quiet --set-upstream
+- git push --quiet --set-upstream origin master
 
 after_failure:
 - .travis/push.sh
