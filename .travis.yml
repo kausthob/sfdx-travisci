@@ -3,6 +3,10 @@ os: trusty
 cache: false
 env:
 - URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+branches:
+  except:
+  - master
+
 before_install:
 - openssl aes-256-cbc -K $encrypted_764440049a39_key -iv $encrypted_764440049a39_iv
   -in assets/server.key.enc -out assets/server.key -d
@@ -31,3 +35,5 @@ after_success:
   --username $USERNAME --setdefaultdevhubusername -a DeployOrg
 - sfdx force:source:deploy -u DeployOrg -w 10 -p ./force-app
 - sfdx force:apex:test:run -u DeployOrg -w 10
+
+after_failure:
