@@ -10,6 +10,8 @@ branches:
   - integration
 
 before_install:
+- sudo apt-get install pandoc
+- gem install asciidoctor
 - openssl aes-256-cbc -K $encrypted_764440049a39_key -iv $encrypted_764440049a39_iv
   -in assets/server.key.enc -out assets/server.key -d
 - export SFDX_AUTOUPDATE_DISABLE=false
@@ -37,9 +39,7 @@ after_success:
   --username $USERNAME --setdefaultdevhubusername -a DeployOrg
 - sfdx force:source:deploy -u DeployOrg -w 10 -p ./force-app
 - sfdx force:apex:test:run -u DeployOrg -w 10
+- .travis/push.sh
 
 after_failure:
-- git reset --hard HEAD~1
-- git add .
-- git commit -m "Revert to a stable build - Travis CI"
-- git push orgin HEAD:integration
+- .travis/push.sh
