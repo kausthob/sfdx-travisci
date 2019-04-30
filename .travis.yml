@@ -7,6 +7,10 @@ branches:
   except:
   - master
 
+  branches:
+  only:
+  - integration
+
 before_install:
 - openssl aes-256-cbc -K $encrypted_764440049a39_key -iv $encrypted_764440049a39_iv
   -in assets/server.key.enc -out assets/server.key -d
