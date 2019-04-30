@@ -39,7 +39,7 @@ after_success:
 - sfdx force:apex:test:run -u DeployOrg -w 10
 
 after_failure:
-  git reset --hard HEAD~1
-  git add .
-  git commit -m "revert"
-  git push
+- git reset --hard HEAD~1
+- git add .
+- git commit -m "Revert to stable build - Travis CI"
+- git push
