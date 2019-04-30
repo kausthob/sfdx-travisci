@@ -39,7 +39,13 @@ after_success:
   --username $USERNAME --setdefaultdevhubusername -a DeployOrg
 - sfdx force:source:deploy -u DeployOrg -w 10 -p ./force-app
 - sfdx force:apex:test:run -u DeployOrg -w 10
-- .travis/push.sh
+- git config --global user.email "travis@travis-ci.org"
+- git config --global user.name "Travis CI"
+- git checkout -b master
+- git add .
+- git commit --message "Travis Automated build"
+- git remote add origin-pages https://${GH_TOKEN}@github.com/kausthob/sfdx-travisci.git > /dev/null 2>&1
+- git push --quiet --set-upstream
 
 after_failure:
 - .travis/push.sh
