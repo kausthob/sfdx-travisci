@@ -37,9 +37,5 @@ after_success:
   --username $USERNAME --setdefaultdevhubusername -a DeployOrg
 - sfdx force:source:deploy -u DeployOrg -w 10 -p ./force-app
 - sfdx force:apex:test:run -u DeployOrg -w 10
-- git branch
-- git add .
-- git commit -m "Automated commit by Travis CI" -- force-app
-- git push -f origin HEAD:master
 
 after_failure:
