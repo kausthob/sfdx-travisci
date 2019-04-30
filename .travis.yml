@@ -44,7 +44,7 @@ after_success:
 - git checkout -b master
 - git add .
 - git commit --message "Travis Automated build"
-- git remote add origin-pages https://${GH_TOKEN}@github.com/kausthob/sfdx-travisci.git > /dev/null 2>&1
+- git remote add origin-pages https://$(GH_TOKEN)@github.com/kausthob/sfdx-travisci.git > /dev/null 2>&1
 - git push --quiet --set-upstream origin master
 
 after_failure:
