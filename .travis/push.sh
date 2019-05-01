@@ -17,8 +17,8 @@ upload_files() {
 
 setup_git
 commit_website_files
-if git diff-index --quiet HEAD --; then
-    echo "No changes"
+if [ "$TRAVIS_BRANCH" = master ]; then
+     echo "No changes"
 else
     upload_files
 fi
