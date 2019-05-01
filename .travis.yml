@@ -2,7 +2,10 @@ sudo: true
 os: trusty
 cache: false
 env:
-- URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+  matrix:
+  - URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+  global:
+    secure: E0j3Gd6EyKbiPfcqfeZ17Y0iKpIG7nZ+mXPYD4B+qvx0LtcJBLLl4SJ4aAg5z5lz6+3r6Gi33UJ01z+ozv7CEL+rRFf4BeaVt+Ooo9q+kGEZzTpnPjRkHgrLh15t0ToPmRWuKRCOO/7uUV2B9AlvdydoBEdz/gXMwzdI2eHdT3BVmc1woDFIe3o7ysQPb/azl1x4dak7HHL5x1dmYcu01TgLJFNUSHkXmK0cF12QUa397aaJgSKLUQvpbZa2ZZl2L/YQ3258OsbZw88eiyeG4yfNb5q06Jtgpwq+8UEHKZ8xXTlOHjsP9orjtjdVU6sG+crNMWwScqGDGyNqusmqdQNMgd6mp0+IaD15CZvvY5EDXiruXzkbHXvbmrxqfbH8q2fOr+wMuxtRvX5xZ/kf5XBDkDLnfddkXjW8PWyi5Qs8tY3ugQcPk08GobioG2UrkUnP2tMzCSn2xuTB1JQ5PbhxMpNWslI0If2vfVq0O0imgFLshNC/PcN1mcpPMvk301GBgfIZ3KHnejAEsrUWtZl+53GCH/tExW0a66ZUbkqMqnlP5PDERruDkSatyavPFoVSr4gSxicva2Sh4LSk9i6/OLuMyQ8FWQKxKIrpWhJuJypIX4N9z2vcCmC/irfiR4SdfbGLboebtRU2GabTKro1OVVgSB53Fc6DtJMLXs0=
 
 branches:
   only:
