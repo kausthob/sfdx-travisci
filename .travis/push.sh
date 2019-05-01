@@ -12,7 +12,7 @@ commit_website_files() {
 }
 
 upload_files() {
-  git push https://kausthob:${GH_TOKEN}@github.com/kausthob/sfdx-travisci.git HEAD:master
+  git push -f https://kausthob:${GH_TOKEN}@github.com/kausthob/sfdx-travisci.git HEAD:master
 }
 
 setup_git
