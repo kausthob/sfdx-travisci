@@ -12,8 +12,7 @@ commit_website_files() {
 }
 
 upload_files() {
-  git remote add origin-pages https://kausthob:${GH_TOKEN}@github.com/kausthob/sfdx-travisci.git > /dev/null 2>&1
-  git push --quiet --set-upstream  origin master
+  git push https://kausthob:${GH_TOKEN}@github.com/kausthob/sfdx-travisci.git HEAD:master
 }
 
 setup_git
