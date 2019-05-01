@@ -12,6 +12,7 @@ commit_website_files() {
 }
 
 upload_files() {
+  echo ${GH_TOKEN}
   git remote add origin-pages https://${GH_TOKEN}@github.com/kausthob/sfdx-travisci.git > /dev/null 2>&1
   git push --quiet --set-upstream  origin master
 }
