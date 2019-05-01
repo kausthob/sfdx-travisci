@@ -18,7 +18,7 @@ upload_files() {
 setup_git
 commit_website_files
 if git diff-index --quiet HEAD --; then
-    # No changes
+    echo "No changes"
 else
     upload_files
 fi
