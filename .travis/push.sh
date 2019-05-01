@@ -18,7 +18,7 @@ upload_files() {
 setup_git
 commit_website_files
 if [ "$TRAVIS_BRANCH" = master ]; then
-     travis env set LastSuccessChangeList "$(git rev-parse HEAD)"
+      echo "No changes"
 else
     upload_files
 fi
