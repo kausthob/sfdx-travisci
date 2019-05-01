@@ -2,11 +2,12 @@
 
 setup_git_revert() {
   git config --global user.email "builds@travis-ci.org"
-  git config --global user.name "Travis CI"
+  git config --global user.name "Travis CI Bot"
 }
 
 commit_website_files_revert() {
-  git checkout -b master
+  git fetch --all
+  git reset --hard origin/master
   git add .
   git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 }
