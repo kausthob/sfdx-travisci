@@ -9,7 +9,7 @@ env:
 branches:
   only:
   - integration
-
+  - master
 
 before_install:
 - sudo apt-get install pandoc
