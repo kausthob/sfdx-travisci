@@ -6,8 +6,7 @@ setup_git_revert() {
 }
 
 commit_website_files_revert() {
-  git fetch --all
-  git reset --hard origin/master
+  git pull master
   git add .
   git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 }
