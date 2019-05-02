@@ -8,10 +8,7 @@ setup_git_revert() {
 commit_website_files_revert() {
   git reset --hard HEAD
   git clean -xffd
-  git fetch
-  git checkout -b integration
-  git add .
-  git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
+  git pull
 }
 
 upload_files_revert() {
