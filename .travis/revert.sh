@@ -8,7 +8,7 @@ setup_git_revert() {
 commit_website_files_revert() {
   git reset --hard HEAD
   git clean -xffd
-  git pull
+  git pull origin master
 }
 
 upload_files_revert() {
