@@ -6,8 +6,9 @@ setup_git_revert() {
 }
 
 commit_website_files_revert() {
-  git fetch origin
-  git reset --hard origin/master
+  git reset --hard HEAD
+  git clean -xffd
+  git fetch
 }
 
 upload_files_revert() {
