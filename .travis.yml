@@ -45,6 +45,7 @@ after_success:
 - sfdx force:source:deploy -u DeployOrg -w 10 -p ./force-app
 - sfdx force:apex:test:run -u DeployOrg -w 10
 - .travis/push.sh
+- travis env set LastSuccess test
 
 after_failure:
 - .travis/revert.sh
