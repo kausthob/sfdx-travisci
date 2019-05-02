@@ -6,9 +6,9 @@ setup_git_revert() {
 }
 
 commit_website_files_revert() {
-  git branch
   git checkout integration
-  git reset --hard master
+  git fetch origin       
+  git merge origin/master
 }
 
 upload_files_revert() {
