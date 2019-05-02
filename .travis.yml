@@ -4,8 +4,6 @@ cache: false
 env:
   matrix:
   - URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
-  global:
-    secure: JDi2+DO2GRaFkhMUu3/DsF7RS+0eIz5sr74X+1XocprYBGNREkuh4ZZIbKCHbX4UlaODWqPdc1vq+BKVlMXPQt0pvzq734QERmVQGxhYEYaH99KBzHwIru/tmR9cGiYMcj7T53RDsC0u9TuPyxKj95xp29lKLSfKJ4i1EsiQwvwC9TdB+gV55qOIcQz6D83M16yWR2DL2Z3swDRMKhUZn5yfW33gXU7k1OTmeyD16cxFlegNA46fycHnermA1l4OYkXlCzcp5c32iwoC0+6bzqbhWXPslEh2k+PM1rbTqSLF2wavfC+s1cZsHWpJoCtS3U4kjwlEv0rchf0QRgFc7cPE3g8ieFRi4oaWeGvGk+gogSIogU1A6/H2dF8ZYFnciIQyeyOQjeFQ13UYqAskau+tUAwAK636UK7B4iq5xxky6/hnRYzKADKNWY6LDZ+0tGZTH03bKCelXVpYPZ/Qpwjq28tEybrty3JJ7mouDRol1Z+XfEbpJ2M0maGE8lcqGaVPAanOZS4J/I7xnJjDApx5YbCTVy7UGDXg44dLLE75LtS0SQ+R6K+Yph6D3L5RR+XjbotgM2+IVpuACeWVBCQHj+SpSCwnT0ly+sL5mHW8rGcsOLY7g+nOznHjlhZAUP5LOcvwiADydCCC2w7IvK2V+sUfl01ZGOjMekLHAMI=
 branches:
   only:
   - integration
